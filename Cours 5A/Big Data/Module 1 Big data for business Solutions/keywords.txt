@@ -1,0 +1,43 @@
+Key points for exam = 
+SI = Ensemble organisé et dynamique de ressources (personnels, logiciels, données, matériels ...) permettant : d'acquérir, de traiter, de stocker, de communiquer des informations dans et entre les organisations, afin de fournir des services informationnels aux différentes parties prenantes. 
+Le SI est au service de l'organisation et de ses métiers.
+L'informatique est un moyen privilégies d'instrumentation du système d'information.
+
+Data Science is the art of turning data into actionable information.
+Business DT is the art of turning data through actionalble information into valuable actions. 
+DataScience = Computer science + Mathematics + business & domain knowledge.
+DATA SCIENCE = Question, Validate, Modelize
+
+A business process is a sequence of activities whose purpose is to produce a defined outcome (product,service) directed by an organized grouping of resources (people, facilities, information...).
+A business process
+involves actors, resources, rules, information...,
+transforms inputs into outputs by adding value,
+is intended to meet the demand of a customer.
+(A business process is not a product or service itself or a simple series of tasks or actions.)
+
+La finalité du Système d’Information dans les organisations : Faciliter la prise de décision en apportant les informations nécessaires aux décideurs; Faciliter (voire automatiser) les opérations courantes
+
+/*
+COMPUTER  SCIENCE: The study of automating algorithmic processes that scale.
+ARTIFICIAL INTELLLIGENCE:  An ideal "intelligent" machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at an arbitrary goal.
+MACHINE LEARNING :The study and construction of algorithms that can learn from and make predictions on data.
+DEEP LEARNING:  is a branch of machine learning based on a set of algorithms that attempt to model high-level abstractions
+*/
+
+Learning ? “Learning is the acquisition of knowledge or skills through experience, study, or by being taught.” OR "Learning is any process by which a system improves performance from experience."
+
+Machine Learning? =  Machine Learning uses computers to perform predictive models that learn from existing data to predict trends, performance and future behaviors without being explicitly programmed.
+The goal is to predict  the responses for further observations with the lowest average possible prediction error. 
+le but du machine learning : généraliser simplement avec quelques phénomènes.
+Machine Learning Systems:
+
+			- improve their Performance
+			- at some Task
+			- with Experience
+
+
+probability something ...
+overfitting, underfitting, 
+variance
+algorithm
+les 3 ...  quoi ?

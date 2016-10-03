@@ -1,0 +1,32 @@
+# 26 Sep 2016 — 08:33:02 AM #Machine Learning
+!!! TIP
+    Book : __Learning from data__
+
+# 26 Sep 2016 — 03:55:41 PM #note
+Régularisation : pénalisation possible des hypothèses, afin d'éviter des solutions complex ou favoriser soft simple, ou eviter d'app bruit
+Overfit : qu'est-ce qui amène à le faire ? Coller trop au bruit par rapport à l'information.
+Model non lineaire, comment on les applique, à quoi ça sert ? et pourquoi ? ça sert à 
+
+
+Model simple :  moins il y a de paramètre, mieux c'est
+pk préférer un model simple : on paie la complexiter du model
+
+# 03 Oct 2016 — 08:47:13 AM
+Regression, plus proche voisin, séparation
+
+Erreur in sample Ein : quel erreur sur mon ensemble d'entrainement même si on ne l'a pas entrainé : 
+
+k-nearest neighbours : fonction qui renvoie le sign -1 si il y a plus de -1 que de +1
+
+regression logistique : renvoie probabilité 
+reg linéaire : renvoie une moyenne
+classification : renvoie la majorité (class)
+
+SVM : support vector machine 
+1ere idée de base : marge, car maybe variance diminue and bruit
+Dans le cas séparable des données, on peut avoir une droite qui maximise la marge
+Si c pas séparable, 2 solutions : marge vs erreur 
+-transformer les données, pour 
+RBF ? espace infini ...
+
+bootstrapping : entrainer un modele avec plusieurs echantillon avec remise, et aggrégé les résultats

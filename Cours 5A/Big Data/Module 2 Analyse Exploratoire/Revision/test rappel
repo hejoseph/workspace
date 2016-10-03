@@ -1,0 +1,51 @@
+La p-valeur (0,8149) du test de Shapiro-Wilk étant strictement
+supérieure à  = 5%, le test n’est pas significatif. Vous
+conservez donc l’hypothèse nulle H0 du test de Shapiro-Wilk.
+Le risque d’erreur associé à cette décision est un risque de
+deuxième espèce . Vous ne pouvez pas l’évaluer dans le cas
+d’un test de Shapiro-Wilk. Maintenant nous pouvons calculer
+l’intervalle de confiance cherché (nous rappelons que nous
+connaissons l’écart-type de la population).
+
+Pour réaliser le test de Fisher-Snedecor, vous devez taper la ligne
+de commande suivante :
+> var.test(jusorange,acideascorbique)
+R renvoie le résultat suivant :
+F test to compare two variances
+data: jusorange and acideascorbique
+F = 2.5701, num df = 9, denom df = 9, p-value = 0.1759
+alternative hypothesis: true ratio of variances is not
+equal to 1
+95 percent confidence interval:
+0.6383833 10.3473187
+sample estimates:
+ratio of variances
+2.570128
+La p-valeur (0,1759) du test de Fisher-Snedecor étant strictement
+supérieure à  = 5%, le test n’est pas significatif. Vous conservez
+H0. Le risque d’erreur associé à cette décision est un risque de
+deuxième espèce  qu’il faudrait évaluer. Donc vous pouvez
+conclure, au seuil  = 5%, que les deux variances des deux
+populations sont égales.
+Il ne vous reste plus qu’à effectuer un test de Student dans le cas
+où les deux variances de deux populations sont égales. Pour cela,
+vous tapez la ligne de commande suivante :
+> t.test(jusorange,acideascorbique,
+alternative="greater",var.equal=TRUE)
+R renvoie le résultat suivant :
+Two Sample t-test
+data: jusorange and acideascorbique
+t = 3.1319, df = 18, p-value = 0.002881
+alternative hypothesis: true difference in means is
+greater than 0
+95 percent confidence interval:
+2.311966 Inf
+sample estimates:
+mean of x mean of y
+13.18 8.00
+La p-valeur (0,002881) du test de Student étant inférieure ou égale
+à  = 5%, le test est significatif. Vous rejetez H0 et vous décidez
+que H1 est vraie avec un risque d’erreur de première espèce
+ = 5%.
+Donc vous pouvez conclure, avec un risque d’erreur  = 5%, que le
+jus d’orange accélère plus la croissance que l’acide ascorbique.

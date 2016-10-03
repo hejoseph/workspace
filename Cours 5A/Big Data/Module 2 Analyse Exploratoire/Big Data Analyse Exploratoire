@@ -1,0 +1,77 @@
+13/09/16
+Analyse exploratoire 
+
+ex : tableau n ligne p colonne
+dimension = np
+p = variable (stats), features et attributs (informaticien)
+n = individus, unités statistiques
+Stats exploratoire = le but est de résumer, car l'obj de la stat est de trouver un profil moyen
+On ne peut calculer les moyennes que quand les variables sont ...
+position dispersion formes
+variable quantitative, qualitative
+dans qualitative = y'a nominale et ordinal (il y a un ordre)
+dans quantitative = y'a discretes(d) et continues(c).
+ex: d = nb d'enfants, nb pers formant le foyer fiscal, nb piece de votre logement, nb d'appel telephonique d'un standard pas d'arret(pas de période d'observation). 
+ex: c = age, salaire,  
+diff entre continu et discret 
+loi pour variable discret fini : 
+-Binomiale, Bernouilli, uniforme, hypergéométrique 
+loi pour variable discret infini : 
+-Binomiale, Poisson
+loi pour variable continu fini: 
+-Normal, uniforme
+loi pour variable continu infini: 
+-Normal, Student, La place, Fisher, Exponentielle 
+Algo Missing at random (MAR) or (Non Aléatoire).
+Deux façon de voir la corrélation : linéaire = suivant une droite, que sur des variables quantitatives continues
+extrapolation = il existe une relation entre la variable discrete avec la continue
+le coeff de spearman et kendall
+
+
+14/09/16
+Analyse Exploratoire
+liaison != relation(= y en fonction de x )
+acp only on variable correlated
+test khi deux (test asymptotique = doit verifier certaine condition, n>50) only on variable qualitative
+test X² = test fisher, doit avoir même resultat ? 
+AFC(analyse factoriel des correspondance) sur 2 variable qualitative. 
+Ex : x : candidat presidentielle, et y : région
+ou x : prof et y : année esiea
+prob de afc, comme acp c'est qu'il n'y a pas de tests
+tableau contingence = on compte
+moyenne only on variable quantitative
+acp = on cherche à faire des ressemblances
+variable(candidat presidentielle) ? individu(département/région) ?
+afc met la projection de deux variables (car ce sont des modalités), ce que ne fait pas l'acp
+
+ACM - se fait sur chacune des modalités des variables qualitative (obj = supprimer les modalités rarement choisies)
+
+AFC = compter le nombre de tel chose
+L'ACM c'est la même chose, dans le comptage what i don't know 
+
+CAH - Classification ascendante hierarchique
+la classif est induite par les variables qui vont les créer, faut donc bien déterminer les variables 
+modèle descriptive avant prédictive.
+
+
+
+TD2 : lever de cramer proche de 0 indépendance, proche de 1 dépendance
+
+15/09/16
+TD3: inertie traduit la continuité 
+nuage de point = poids, distance par rapport au centre
+diff entre K-mean and CAH 
+K-Mean = specify nb class(groupe nuage de points), RANDOM !
+CAH =  
+
+
+#Fiches#
+
+ACP
+Objectifs :
+• Comparer les villes du point de vue des températures mensuelles
+• Établir des ressemblances entre villes, des oppositions ?
+Une typologie des villes ?
+• Certains mois de l'année sont-ils liés ? Sont-ils corrélés entre eux ?
+• Peut-on résumer des variables fortement corrélées par des
+variables synthétiques ?

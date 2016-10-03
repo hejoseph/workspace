@@ -1,0 +1,88 @@
+12/09/16 
+Big Data & Data science for business solutions (only), not datascientist
+
+"Les compétences développées dans cette nouvelle majeure permettront aux élèves ingénieurs d'élaborer et de gérer des solutions métier à base de traitements et d'analyse de données massives ou non, en phase avec les réalités de l'écosystème digital"
+
+Comment je mène un projet datascience métier de bout en bout? 
+
+No business without IS & IT
+
+/!\
+SI = Ensemble organisé et dynamique de ressources (personnels, logiciels, données, matériels ...) permettant : d'acquérir, de traiter, de stocker, de communiquer des informations dans et entre les organisations, afin de fournir des services informationnels aux différentes parties prenantes. 
+Le SI est au service de l'organisation et de ses métiers.
+L'informatique est un moyen privilégies d'instrumentation du système d'information.
+
+Etre entre "business", "IS", et "Data analytics";
+
+ClickView pour des dashboards analytics (cv)
+
+Data Science is the art of turning data into actionable information.
+Business DT is the art of turning data through actionalble information into valuable actions. 
+DataScience = Computer science + Mathematics + business & domain knowledge.
+
+A business process is a sequence of activities whose purpose is to produce a defined outcome (product,service) directed by an organized grouping of resources (people, facilities, information...).
+
+A BP :
+-involves actors, resources, rules, information...
+-transformes inputs nto outputs by adding value,
+-is intended to meet the demande of a customer.
+
+le but du machine learning : généraliser simplement avec quelques phénomènes.
+
+
+
+Key points for exam = 
+SI, DataScience, Business Process, Finalité du SI;
+Question ,validation ...
+Learning, machine learning
+probability something ...
+overfitting, underfitting, 
+variance
+algorithm
+les 3 ...  quoi ?
+
+
+
+19/09/16
+Big Data & Data science for business solutions (only), not datascientist
+SI ? à qui ça sert ? On ne fait pas du machine learning si on connait le modele f(x).
+généralisation sur une échantillon = hypothese
+géné sur hypo = approximation
+Modele est consuite à partir de la reprez du monde, à partir de mes données
+Valeur ajouté = proposer des services qui traitent les données, prédictions...
+
+prix stockage diminue, réseau augmente, cpu diminue, bandwidth augmente.
+
+digitalization ? interconnexion permanente des personnes et des objets en tout lieu et pour tout usage, impacte tous les aspects des organisations.
+Cet impact soutenu et ryhtmé par les technologies digitales portent le nom de digitalisation.
+
+User experience = intéragit avec le produit
+Customer experience = intéragit avec la marque
+
+mass(généralisation) vs multitude(traite un par un) 
+
+20/09/16
+platform ? is a plug and play infrastructure that enables producer and consumer of value to co-create, interact and exchange with each others.
+
+keywords : 
+relier finalité entreprise avec SI; comprendre le lien SI et business
+architecture métier, fonctionnal, applicative, donnée? Quel métier ... Quel ...
+Ecosysteme de l'entreprise, agilité, ca va vite dans l'entreprise
+architecture SI, agilité = business et SI
+Organisation fondamentale d'un SI (slide)
+SI = contribuer valeur, aligner besoin, mesure performance, manager risk et resources.
+Main foundation Driver? Capacité à stocker, a faire circuler, (quand on fait du DS)
+Structuré, semi structuré ....
+Bcp data devenu pas cher ? important ?
+Digitalization ? par coeur
+Mass vs Multitude
+Monde matos et jonction déma = platform + def
+
+5 étapes process generic
+projet classic vs agile
+prédictive pk ? livraison par itération
+adaptative ? les concurrents sortent un produit, on doit rapidement sortir le même
+diff pred et adap = pred : on sait ce qu'on veut, adap : on ne sait pas, mais j'ai le droit
+backlog ? je develop les plus prioritaires, ça sert à rien de tout détailler
+
+

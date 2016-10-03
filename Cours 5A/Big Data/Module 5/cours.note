@@ -1,0 +1,26 @@
+# 27 Sep 2016 — 08:36:07 AM #Module 5 
+
+Orange utilise leur propre "HortonWork" (open source, 1er en france)
+Batch = "je prends les data, et je les copie dans hadoop"
+Single failure recovery = en hadoop si une machine tombe, le cluster tombe, single point of failure 
+Big data : problem en cluster, c'est le réseau : à privilégier lors de la construction d'infrastructure
+Blackfiber = fil dans le transatlantique, pour echange financier
+Vélocité : le fait de distribuer les données, le temps que j'écrive sur le disk, chaque machine
+
+vianney : databricks
+
+k-means : choisis 3 poitns aléatoirement, je calcule la distance de tous les p
+
+broker de message ? 
+Kafka cluster
+
+TD : 
+install vm
+go ifconfig : access server follow by : 8088 for hadoop
+
+:8888 cloudera pass cloudera
+use hive : 
+use putty to access ip
+pyspark console
+data=sc.textFile("hdfs://@ip:8020/user/cloudera/ad...csv")
+data_splitted = data.map(lambda x : x.split(","))

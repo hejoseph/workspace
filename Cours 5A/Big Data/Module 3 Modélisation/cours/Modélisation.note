@@ -1,0 +1,193 @@
+21/09/16
+1er Modèle : Régression Linéaire
+y = b0 + b1*x + £
+y: réponse
+X: une seule variable explicative
+(x,y) quantitative
+
+si 4 cond vérif : 
+£ indépendant ?
+L(£)=N
+Var(£)=¤²   (¤:sigma)
+E(£)=0
+
+ex : Y = salaire, X = niv étude;
+Sous R :    
+    modele<-lm(salaire~niv...)
+    summary(modele)
+
+/*Avant de faire modele, on fait analyse préliminaire. Par exemple ASC, faire test chi deux*/
+pk faire data frame et pas work on vecteur ? 
+
+Sur échantillon, il n'y a pas de lien linéaire sur la masse et taille sur toute population. il faut p-value.
+cor.test(taille, masse)
+p-value = 0,51 ; > 5%
+le test n'est pas significatif, je décide de ne pas rejeter h0
+rho x y = 0, il n'y a pas de corrélation entre masse et taille
+
+modelete<-lm(taille,masse)
+residus<-residual(modele)
+shapiro.test(residus)
+p-value > 5%, n'est pas significatif, £ ne suit pas une loi normale
+homogéneité des variances = répétition des valeurs, càd 177 cm plusieurs masse
+Test fisher : H0 : b0 = 0; H1 : différent
+    = redontdant que le test de corrélation.
+R² = 28,77% , bon R² au moins 80%, modele incomplète, la taille ne s'explique pas uniquement par la masse.
+
+On fait quoi après ? 
+    -incomplete
+    -on introduit d'autre variable
+    -regression polynomiale
+
+reg linéaire multiple se fait sur quelle donnée ? sur l'exemple ozone (température ?
+load les data : 
+str(ozone), on a 112 lignes 14 colonnes
+quelle est la variable qu'on veut expliquer ? Quel Y quel X ? On veut expliquer quelle est la température de demain à 15.
+ozone = tableau de donnée
+on veut expliquer T(15), par les autres variables.
+(/*R distingue les minuscules des majuscules*/)
+je prends toutes les variables sauf ops, car pas quantitative
+
+La vrai variable que je veux prédire c'est max03, sauf de vent et de pluie
+
+1er : T15 : R² : 92% , residus suivent une loi normale
+2eme : maxo3 : residus suivent pas une loi normale p<5%
+
+tout ce qui est regression only on quantitative variables.
+
+1er temps : apprentissage 
+2e temps : test->réglages
+3e temps : validation
+
+reg linéaire multiple marche que quand les variables sont décorélés. -> use ascp
+
+On décorele les variables, mais on garde les variables, pour la prédiction
+    pour avoir le maximum de robustesse, même si on a un bon R²
+
+Imaginons que réglage est bon.
+
+Test fisher test les coeff du model. H0 : coeff 
+GLM = aov, lm, généralisation de tout
+    = projection
+
+deux model avec diff nb variable, on compare leur R². Plus il y a de variable, plus R² est grand
+Quand même nb variables, 
+
+!!! Note
+    #Selection de variable:Test de Student
+    Procédure pas à pas
+        Descendants (élimination au fur et à mesure) 
+        P=7
+        *déterminer un critère objectif, ennlever la variable avec la plus grande p-value, c'est la moins significatif, proche de 1, elle n'influence pas le model*, on a viré la var Longueur
+        P=6
+        on vire la plus grande coeff, et logique qui n'influence pas le PRIX. On enleve la var Cylindré
+
+Moins le model a de variable, moins il est prédictif
+
+Qu'est-ce qu'un model parsimonieux? un model qui a le moins de variable possible 
+
+```
+AIC et BIC quand on cherche à avoir un model explicatif
+Cp de Mallows pour model predictif, et marche pour n'importe quelle valeur
+```
+
+!!! DANGER
+    Model valide : R² adjusted le plus grand
+    Model explicatif : AIC ou BIC pas les deux en mm temps, tend vers l'infini
+    Model predictif : Cp de Mallows tend vers P (nb de prédicteur)
+    Pk on ne veut pas tous les critères les uns à côtés les autres ? car ne servent pas à la même chose. On ne peut pas avoir du predictif, explicatif, et valide en même temps.
+
+!!! Warning "A retenir"
+    CrossValidation : 
+    
+Regression lineaire simple : choisir variable qui maximise la covariance entre Y et Xi, la regression la plus adéquate est R² plus grande
+Le résidus c'est tout ce que je n'ai pas expliqué 
+
+La covariance mesure encore avec la linéarité du model. Cov = E²-E(X)² ? varie en tout cas avec -inf et inf
+
+Dans linéaire multiple, on a pas la variance de X et Y en même temps, car on ne focalisait que sur X.
+La variance se mesure à l'aide de 
+Dans la variance y'a la moyenne, qui est sensible au valeur extreme ?
+
+On décorèle les variables avec ACP
+
+PLS travail sur les variables corrélés, 
+mais on suppose qu'il y a du linéaire au sein de notre modèle.
+
+Reg linéaire multiple, `on ne s'occupe que X et jamais Y`. Pareil pour ACP, sur X only.
+
+Si on ne se projecte pas dans la bonne dimension, on perd de l'info. Norme L1, L², L-inf
+
+La norme L1 réflète la réalité, mais les critères ne sont pas les bonnes ?
+Modele de Lasso, switch entre L1 et L2,
+
+La norme L2 a des problèmes, il faut rectifier avec la norme L1 
+
+#Regression Logistique.
+Y = 0 ou 1 , X = quantitatives
+P(Y=0)=...
+P(Y=1)=...
+
+[](https://google.fr/) 
+
+
+
+# 21 Sep 2016 — 04:33:13 PM #TD2 Module 3 Big Data
+Fig 1 :
+diff deux courbes : En général, je note que les films que j'aime ? je note que des films que j'aime pas ? ou je note pour prévenir les gens que c'est clairement un film de merde ?
+
+
+
+Figure 2 : 
+la courbe grise est une estimation de l'erreur moyenne ? 
+Centre du haut et du bas de la surface grise, est par rapport a la courbe bleu, appelé ... deja sur TD ...
+
+courbe de régression: ça marche comment ? 
+trace plusieurs courbes dans le nuage de point, et corrige les erreurs à chaque fois, plusieurs itération 
+En gros, trace une courbe par rapport à un point, et réitère avec un autre point et essaie de minimiser l'erreur par rapport à courbe précédente.
+
+# 22 Sep 2016 — 08:34:00 AM #Cours 
+Modele => expliquer ou prediction ou classement
+Y = f(X), 
+réduction => CAH reduire les lignes, ACP et ACM réduction de variable
+si var corélé, on transforme les variables
+
+prediction :
+reg linéaire simple multiple, matrice (Y,X) quantitative
+General linear model
+reg logistique
+
+Explication ou classement :
+_Arbres de décision
+_Analyse discriminant de fisher (sur des var quantita j'attribue des groupes)
+
+PLS : il peut y avoir des var manquantes, 
+mais PB : pas de test de fisher, donc pas de test sur les résidus ?
+
+Reg multiple : pris en défaut quand les données sont corrélés, d
+
+carré ordinaire = lisse square
+
+Pour qu'une matrice soit inversible, son déterminant non nulle
+si corrélé, alors déterminant nulle
+
+acp sur des variables qui n'ont pas de lien ? on les centres et réduits ? 
+
+validation croisé 
+
+9:45 (29:43) listen sound track on PLS "vous vous souvenez ... ?"
+
+# 22 Sep 2016 — 10:20:30 AM #Cours
+fisher remplacé par Wald, 
+confint = intervalel de confiance pour les coeffs
+
+maximum de recherche de vraisemblance comme AIC et BIC 
+
+ACP ACM rappel at before 1:16:56 :
+
+
+Arbre de régression = alternative a reg lineaire multiple
+var corrélé mais pg, On prend la variable la plus significative, car elle a la p-value la plus proche de 0.
+On fait un cluster avec cette variable. Une autre var arrive mais moins significative, et on réitère
+
+si c pas quantitative mais quali, on peut prendre le test de khi deux
